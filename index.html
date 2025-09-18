@@ -134,10 +134,10 @@
  
  /* ---- Links ---- */
  .links {
-  display: flex
-  flex-direction: column: /*stack vertically */
-  align-items; center; /* center horizontally */
-  gap: 10px: /* spacing between links*/
+   display: flex;
+   flex-direction: column; /* stack vertically */
+   align-items: center; /* center horizontally */
+   gap: 10px; /* spacing between links */
    margin: 30px 0;
  }
  .links a {
@@ -149,6 +149,50 @@
  .links a:hover {
    text-decoration: underline;
  }
+
+ /* ---- Contact Form ---- */
+ .contact-form {
+   max-width: 600px;
+   margin: 0 auto;
+   text-align: left;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+ }
+ .contact-form label {
+   font-weight: bold;
+   color: #4a2c2a;
+ }
+ .contact-form input,
+ .contact-form textarea {
+   padding: 10px;
+   border: 2px solid #d9b99b;
+   border-radius: 6px;
+   font-size: 1em;
+   width: 100%;
+   box-sizing: border-box;
+ }
+ .contact-form input:focus,
+ .contact-form textarea:focus {
+   outline: none;
+   border-color: #b48a6b;
+   box-shadow: 0 0 5px rgba(212, 170, 135, 0.6);
+ }
+ .contact-form button {
+   background-color: #d9b99b;
+   color: white;
+   font-weight: bold;
+   padding: 12px;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: transform 0.3s ease;
+ }
+ .contact-form button:hover {
+   transform: scale(1.05);
+   background-color: #b48a6b;
+ }
+
  /* ---- Footer ---- */
  footer {
    background-color: #d9b99b;
@@ -157,6 +201,7 @@
    margin-top: 20px;
    color: white;
  }
+
  /* ---- Responsive Design ---- */
  @media screen and (max-width: 768px) {
    .gallery {
@@ -177,11 +222,14 @@
 <a href="#hero">Home</a>
 <a href="#shades">Shades</a>
 <a href="#instagram">Instagram</a>
+<a href="#contact">Contact</a>
 </nav>
+
 <header id="hero">
 <h1>Alinee Beauty</h1>
 <p>Discover your perfect shade to Every Lip, Every Mood.</p>
 </header>
+
 <section>
 <img src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\main.jpg" alt="Main Lip Product" class="hero-img">
 <p class="motto">Every mood. Every moment. Every you.</p>
@@ -190,6 +238,7 @@
    Your browser does not support the video tag.
 </video>
 </section>
+
 <section id="shades">
 <h2>Our Shades</h2>
 <div class="gallery">
@@ -207,6 +256,7 @@
 </div>
 </div>
 </section>
+
 <section id="instagram" class="ig-section">
 <h2>Follow the glam.</h2>
 <p>Catch more shades, swatches, and behind-the-scenes on our socials.<br>
@@ -215,9 +265,10 @@
 <div class="ig-gallery">
 <img src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\first.png" alt="IG Post 1">
 <img src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\sec.jpg" alt="IG Post 2">
-<img src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\third.jpg"alt="IG Post 3">
+<img src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\third.jpg" alt="IG Post 3">
 </div>
 </section>
+
 <section class="links">
 <h2>Links:</h2>
 <a href="https://pixabay.com/photos/woman-portrait-african-makeup-856125/" target="_blank">
@@ -227,6 +278,30 @@ https://pixabay.com/photos/woman-portrait-african-makeup-856125/
 https://www.pexels.com/search/lipstick/ 
 </a>
 </section>
+
+<!-- Contact Form -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form class="contact-form">
+    <label for="fname">First Name *</label>
+    <input type="text" id="fname" name="fname" placeholder="First" required>
+
+    <label for="lname">Last Name *</label>
+    <input type="text" id="lname" name="lname" placeholder="Last" required>
+
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+
+    <label for="cemail">Confirm Email *</label>
+    <input type="email" id="cemail" name="cemail" placeholder="Confirm Email" required>
+
+    <label for="comments">Comments *</label>
+    <textarea id="comments" name="comments" rows="5" placeholder="Please let us know what's on your mind." required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
 <footer>
 <p>&copy; 2025 Alinee Beauty. All rights reserved.</p>
 </footer>
