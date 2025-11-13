@@ -3,34 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Number Guessing Game</title>
+  <title>CSS Box Model Challenge</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🎯 Number Guessing Game</h1>
-  <p>Guess a number between 1 and 100!</p>
+  <h1>My CSS Box Model Challenge</h1>
 
-  <script>
-    // Step 1: Generate a random number
-    const secretNumber = Math.floor(Math.random() * 100) + 1;
-    let guess = 0;
-    let attempts = 0;
-
-    // Step 2: Repeat until the user guesses correctly
-    while (guess !== secretNumber) {
-      guess = Number(prompt("Enter your guess (1–100):"));
-      attempts++;
-
-      // Step 3: Compare the guess to the random number
-      if (guess < secretNumber) {
-        alert("Too low! Try again.");
-      } else if (guess > secretNumber) {
-        alert("Too high! Try again.");
-      } else if (guess === secretNumber) {
-        alert(`🎉 Correct! The number was ${secretNumber}. You guessed it in ${attempts} tries!`);
-      } else {
-        alert("Please enter a valid number!");
-      }
-    }
-  </script>
+ 
+  <div class="my-box">
+    <p>This is my box content!</p>
+  </div>
 </body>
 </html>
