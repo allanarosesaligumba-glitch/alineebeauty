@@ -1,310 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alinee Beauty</title>
-<style>
- /* ---- Base Styles ---- */
- body {
-   font-family: Arial, sans-serif;
-   margin: 0;
-   padding: 0;
-   background-color: #fffaf5;
-   color: #4a2c2a;
- }
- /* ---- Navigation Bar ---- */
- nav {
-   background-color: #d9b99b;
-   display: flex;
-   justify-content: center;
-   gap: 30px;
-   padding: 15px 0;
-   position: sticky;
-   top: 0;
-   z-index: 1000;
- }
- nav a {
-   color: white;
-   text-decoration: none;
-   font-weight: bold;
-   transition: transform 0.3s ease; /* 2D transform */
- }
- nav a:hover {
-   transform: scale(1.1);
- }
- /* ---- Header ---- */
- header {
-   background-color: #d9b99b;
-   padding: 30px 20px;
-   text-align: center;
- }
- header h1 {
-   margin: 0;
-   font-size: 2.5em;
-   color: white;
- }
- header p {
-   margin: 5px 0 0;
-   font-size: 1.2em;
-   color: #fffefc;
- }
- /* ---- Sections ---- */
- section {
-   padding: 20px;
-   text-align: center;
-   max-width: 1200px; /* max-width for responsive layout */
-   margin: 0 auto;
- }
- .hero-img {
-   width: 80%;
-   max-width: 700px;
-   border: 5px solid #d9b99b;
-   border-radius: 12px;
-   margin-bottom: 20px;
- }
- .motto {
-   font-size: 1.5em;
-   margin: 15px 0;
-   font-weight: bold;
- }
- video {
-   margin-top: 10px;
-   border-radius: 10px;
-   width: 100%;
-   max-width: 400px;
-   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
- }
- /* ---- Gallery ---- */
- .gallery {
-   display: flex;
-   justify-content: center;
-   gap: 50px;
-   flex-wrap: wrap;
- }
- .shade {
-   position: relative;
-   display: inline-block;
-   perspective: 1000px; /* 3D transform for hover effect */
- }
- .shade img {
-   width: 250px;
-   border-radius: 10px;
-   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-   margin: 20px;
-   transition: transform 0.5s;
- }
- .shade:hover img {
-   transform: rotateY(15deg) rotateX(10deg) scale(1.05);
- }
- .shade span {
-   position: absolute;
-   bottom: 10px;
-   left: 50%;
-   transform: translateX(-50%);
-   background-color: rgba(0,0,0,0.6);
-   color: #fff;
-   padding: 5px 10px;
-   border-radius: 8px;
-   font-size: 1em;
-   opacity: 0;
-   transition: opacity 0.3s ease;
- }
- .shade:hover span {
-   opacity: 1;
- }
- /* ---- Instagram Section ---- */
- .ig-section {
-   background-color: #f8f1eb;
-   padding: 30px 20px;
-   margin-top: 30px;
- }
- .ig-gallery {
-   display: flex;
-   justify-content: center;
-   gap: 20px;
-   flex-wrap: wrap;
-   margin-top: 20px;
- }
- .ig-gallery img {
-   width: 200px;
-   border-radius: 10px;
-   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
- }
- 
- /* ---- Links ---- */
- .links {
-   display: flex;
-   flex-direction: column; /* stack vertically */
-   align-items: center; /* center horizontally */
-   gap: 10px; /* spacing between links */
-   margin: 30px 0;
- }
- .links a {
-   display: flex;
-   color: #4a2c2a;
-   text-decoration: none;
-   font-weight: bold;
- }
- .links a:hover {
-   text-decoration: underline;
- }
-
- /* ---- Contact Form ---- */
- .contact-form {
-   max-width: 600px;
-   margin: 0 auto;
-   text-align: left;
-   display: flex;
-   flex-direction: column;
-   gap: 15px;
- }
- .contact-form label {
-   font-weight: bold;
-   color: #4a2c2a;
- }
- .contact-form input,
- .contact-form textarea {
-   padding: 10px;
-   border: 2px solid #d9b99b;
-   border-radius: 6px;
-   font-size: 1em;
-   width: 100%;
-   box-sizing: border-box;
- }
- .contact-form input:focus,
- .contact-form textarea:focus {
-   outline: none;
-   border-color: #b48a6b;
-   box-shadow: 0 0 5px rgba(212, 170, 135, 0.6);
- }
- .contact-form button {
-   background-color: #d9b99b;
-   color: white;
-   font-weight: bold;
-   padding: 12px;
-   border: none;
-   border-radius: 8px;
-   cursor: pointer;
-   transition: transform 0.3s ease;
- }
- .contact-form button:hover {
-   transform: scale(1.05);
-   background-color: #b48a6b;
- }
-
- /* ---- Footer ---- */
- footer {
-   background-color: #d9b99b;
-   text-align: center;
-   padding: 10px;
-   margin-top: 20px;
-   color: white;
- }
-
- /* ---- Responsive Design ---- */
- @media screen and (max-width: 768px) {
-   .gallery {
-     gap: 20px;
-   }
-   .shade img {
-     width: 200px;
-   }
-   .ig-gallery img {
-     width: 150px;
-   }
- }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
 </head>
 <body>
-<!-- Navigation Bar -->
-<nav>
-<a href="#hero">Home</a>
-<a href="#shades">Shades</a>
-<a href="#instagram">Instagram</a>
-<a href="#contact">Contact</a>
-</nav>
+  <h1>🎯 Number Guessing Game</h1>
+  <p>Guess a number between 1 and 100!</p>
 
-<header id="hero">
-<h1>Alinee Beauty</h1>
-<p>Discover your perfect shade to Every Lip, Every Mood.</p>
-</header>
+  <script>
+    // Step 1: Generate a random number
+    const secretNumber = Math.floor(Math.random() * 100) + 1;
+    let guess = 0;
+    let attempts = 0;
 
-<section>
-<img src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\main.jpg" alt="Main Lip Product" class="hero-img">
-<p class="motto">Every mood. Every moment. Every you.</p>
-<video controls>
-<source src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\video.mp4" type="video/mp4">
-   Your browser does not support the video tag.
-</video>
-</section>
+    // Step 2: Repeat until the user guesses correctly
+    while (guess !== secretNumber) {
+      guess = Number(prompt("Enter your guess (1–100):"));
+      attempts++;
 
-<section id="shades">
-<h2>Our Shades</h2>
-<div class="gallery">
-<div class="shade">
-<img src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\rose.png" alt="Rose Whisper">
-<span>Rose Whisper</span>
-</div>
-<div class="shade">
-<img src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\fierce.png" alt="Fierce Flame">
-<span>Fierce Flame</span>
-</div>
-<div class="shade">
-<img src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\sweet.png" alt="Sweet Desire">
-<span>Sweet Desire</span>
-</div>
-</div>
-</section>
-
-<section id="instagram" class="ig-section">
-<h2>Follow the glam.</h2>
-<p>Catch more shades, swatches, and behind-the-scenes on our socials.<br>
-    IG: @alineewebsite
-</p>
-<div class="ig-gallery">
-<img src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\first.png" alt="IG Post 1">
-<img src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\sec.jpg" alt="IG Post 2">
-<img src="C:\Users\2023-1-01456\Desktop\AlineeBeauty\assets\third.jpg" alt="IG Post 3">
-</div>
-</section>
-
-<section class="links">
-<h2>Links:</h2>
-<a href="https://pixabay.com/photos/woman-portrait-african-makeup-856125/" target="_blank">
-https://pixabay.com/photos/woman-portrait-african-makeup-856125/
-</a>
-<a href="https://www.pexels.com/search/lipstick/" target="_blank">
-https://www.pexels.com/search/lipstick/ 
-</a>
-</section>
-
-<!-- Contact Form -->
-<section id="contact">
-  <h2>Contact Us</h2>
-  <form class="contact-form">
-    <label for="fname">First Name *</label>
-    <input type="text" id="fname" name="fname" placeholder="First" required>
-
-    <label for="lname">Last Name *</label>
-    <input type="text" id="lname" name="lname" placeholder="Last" required>
-
-    <label for="email">Email *</label>
-    <input type="email" id="email" name="email" placeholder="Enter Email" required>
-
-    <label for="cemail">Confirm Email *</label>
-    <input type="email" id="cemail" name="cemail" placeholder="Confirm Email" required>
-
-    <label for="comments">Comments *</label>
-    <textarea id="comments" name="comments" rows="5" placeholder="Please let us know what's on your mind." required></textarea>
-
-    <button type="submit">Submit</button>
-  </form>
-</section>
-
-<footer>
-<p>&copy; 2025 Alinee Beauty. All rights reserved.</p>
-</footer>
+      // Step 3: Compare the guess to the random number
+      if (guess < secretNumber) {
+        alert("Too low! Try again.");
+      } else if (guess > secretNumber) {
+        alert("Too high! Try again.");
+      } else if (guess === secretNumber) {
+        alert(`🎉 Correct! The number was ${secretNumber}. You guessed it in ${attempts} tries!`);
+      } else {
+        alert("Please enter a valid number!");
+      }
+    }
+  </script>
 </body>
 </html>
-
