@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+</head>
+<body>
+  <h1>🎯 Number Guessing Game</h1>
+  <p>Guess a number between 1 and 100!</p>
+
+  <script>
+    
+    const secretNumber = Math.floor(Math.random() * 100) + 1;
+    let guess = 0;
+    let attempts = 0;
+
+    
+    while (guess !== secretNumber) {
+      guess = Number(prompt("Enter your guess (1–100):"));
+      attempts++;
+
+      
+      if (guess < secretNumber) {
+        alert("Too low! Try again.");
+      } else if (guess > secretNumber) {
+        alert("Too high! Try again.");
+      } else if (guess === secretNumber) {
+        alert(`🎉 Correct! The number was ${secretNumber}. You guessed it in ${attempts} tries!`);
+      } else {
+        alert("Please enter a valid number!");
+      }
+    }
+  </script>
+</body>
+</html>
